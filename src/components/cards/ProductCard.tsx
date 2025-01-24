@@ -1,39 +1,58 @@
-"use client";
-
-import { motion } from "framer-motion";
-
-import { cn } from "@/lib/utils";
-import React from "react";
-import MainButton from "../common/MainButton";
-import { useRouter } from "next-nprogress-bar";
-import Link from "next/link";
-import Image from "next/image";
 
 
-interface IProps {
-  id: string;
-  imageUrl: string;
-  title: string;
-  description: string;
-  price: string;
-  otherPrice: string;
-  type: string;
-  typeValue: string;
-}
 
-function ProductCard({
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ "use client";
+
+ import { motion } from "framer-motion";
+
+ import { cn } from "@/lib/utils";
+ import React from "react";
+ import MainButton from "../common/MainButton";
+ import { useRouter } from "next-nprogress-bar";
+ import Link from "next/link";
+ import Image from "next/image";
+
+
+ interface IProps {
+   id: string;
+   imageUrl: string;
+   title: string;
+   description: string;
+   price: string;
+   otherPrice: string;
+   type: string;
+   typeValue: string;
+ }
+
+ function ProductCard({
   id,
   imageUrl,
   title,
-  description,
-  price,
-  otherPrice,
-  type,
-  typeValue,
+   description,
+   price,
+   otherPrice,
+   type,
+   typeValue,
 }: IProps) {
-  const router = useRouter();
+   const router = useRouter();
   const icons = [
-    {
+     {
       iconUrl: "/images/share_icon.png",
       title: "Share",
       action: () => { },
@@ -58,7 +77,7 @@ function ProductCard({
 
   return (
     <motion.div
-      initial="initial"
+       initial="initial"
       animate="initial"
       whileHover="animate"
       viewport={{ once: false }}
@@ -83,15 +102,14 @@ function ProductCard({
                 : type === "NEW"
                   ? "bg-success"
                   : ""
-            )}
-          >
-            {typeValue}
-          </div>
-        )}
-      </div>
-      <div className="bg-[#F4F5F7] p-4">
-        <p className="text-customBlack text-24 font-semibold">{title}</p>
-        <p className="text-customGray font-medium text-normal py-[8px]">
+             )}
+          >             {typeValue}
+           </div>
+         )}
+       </div>
+       <div className="bg-[#F4F5F7] p-4">
+         <p className="text-customBlack text-24 font-semibold">{title}</p>
+         <p className="text-customGray font-medium text-normal py-[8px]">
           {description}
         </p>
         <div className="flex justify-between items-center">
@@ -108,9 +126,8 @@ function ProductCard({
           "absolute p-4 left-0 right-0 top-0 bottom-0 bg-[#3A3A3A]/80"
         )}
         variants={cardVariant}
-      >
-        <div className="pt-[30%]">
-          <div className="flex justify-center">
+       >
+        <div className="pt-[30%]">          <div className="flex justify-center">
             <MainButton
               text="View product"
               classes="bg-white text-primary font-bold hover:bg-white"
@@ -137,4 +154,4 @@ function ProductCard({
   );
 }
 
-export default ProductCard;
+ export default ProductCard;
