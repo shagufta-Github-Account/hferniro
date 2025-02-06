@@ -1,3 +1,4 @@
+import ProductList from "@/components/ProductList";
 import ShopBannerSection from "@/components/sections/shop/ShopBannerSection";
 import ShopFilterSection from "@/components/sections/shop/ShopFilterSection";
 import ShopHeroSection from "@/components/sections/shop/ShopHeroSection";
@@ -9,12 +10,14 @@ function ShopPage() {
         <div>
             <ShopHeroSection />
             <ShopFilterSection />
-            <div className="mx-4 md:mx-[130px]">
+            <ProductList />
+            
+             {/* <div className="mx-4 md:mx-[130px]">
                 <ShopProductSection />
             </div>
             <div className="my-[70px]">
                 <ShopPaginationSection />
-            </div>
+            </div> */}
 
             <ShopBannerSection />
         </div>
