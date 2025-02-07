@@ -3,6 +3,9 @@
 import { client } from "@/sanity/lib/client"
 
 export interface Iproduct {
+    quantity: number
+  _id: Key | null | undefined
+  slug: any
 
     title: string[],
    image : string,

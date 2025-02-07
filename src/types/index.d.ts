@@ -4,7 +4,9 @@ interface IProduct {
   productName: string | undefined;
   quantity: number;
   unitPrice: number;
-}
+  
+        
+};
 
 interface IResponse {
   response: {
